@@ -22,24 +22,42 @@ function readLine() {
     return inputString[currentLine++];
 }
 
-/**
-*   A line of code that prints "Hello, World!" on a new line is provided in the editor. 
-*   Write a second line of code that prints the contents of 'parameterVariable' on a new line.
-*
-*	Parameter:
-*   parameterVariable - A string of text.
-**/
-function greeting(parameterVariable) {
-    // This line prints 'Hello, World!' to the console:
-    console.log('Hello, World!');
-
-    // Write a line of code that prints parameterVariable to stdout using console.log:
+function getLetter(s) {
+    let letter;
+    // Write your code here
+    let first = s.charAt(0);
     
+    switch(first){
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+            letter = 'A';
+            break;
+        case 'b':
+        case 'c':
+        case 'd':
+        case 'f':
+        case 'g':
+            letter = 'B';
+            break;
+        case 'h':
+        case 'j':
+        case 'l':
+        case 'k':
+        case 'm':
+            letter = 'C';
+            break;
+        default:
+            letter = 'D';
+    }
+    return letter;
 }
 
 
 function main() {
-    const parameterVariable = readLine();
+    const s = readLine();
     
-    greeting(parameterVariable);
+    console.log(getLetter(s));
 }
